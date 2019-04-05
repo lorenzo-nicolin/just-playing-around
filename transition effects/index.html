@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>changethistitle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="changethisdescription" />
+	<link rel="stylesheet" type="text/css" href="reset.css?v=1">
+	<link rel="stylesheet" type="text/css" href="style.css?v=1">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' type='text/css' media='all' />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+	<!-- <link rel='canonical' href='http://changethisurl.co.za/' /> -->
+	<!-- <link rel='shortlink' href='http://changethisurl.co.za/' /> -->
+	<!-- <link rel="icon" href="images/favicon.ico?v=1" /> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="scripts.js"></script>
+</head>
+<style type="text/css">
+            
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: Raleway, Arial;
+            }
+            
+            .content {
+                height: 600px;
+                background-color: #e0e0e0;
+            }
+            
+            .about {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 100px 0;
+                transform-style: preserve-3d;
+                transform: perspective(800px);
+            }
+            .about h2 {
+                text-transform: uppercase;
+                font-size: 50px;
+                font-weight: 400;
+            }
+            .about h2, .about p {
+                transition: all 0.8s ease;
+            }
+            .about.hidden h2 {
+                opacity: 0;
+                transform: translate3d(0, 0, 400px) rotateY(-40deg);
+            }
+            .about.hidden p {
+                opacity: 0;
+                transform: translate3d(0, 0, 400px) rotateY(40deg);
+            }
+
+
+            .contact {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 100px 0;
+                transform-style: preserve-3d;
+                transform: perspective(800px);
+            }
+            .contact h2 {
+                text-transform: uppercase;
+                font-size: 50px;
+                font-weight: 400;
+            }
+            .contact h2, .contact p {
+                transition: all 0.8s ease;
+            }
+            .contact.hidden h2 {
+                opacity: 0;
+                transform: translate3d(0, 0, 400px) rotateY(-40deg);
+            }
+            .contact.hidden p {
+                opacity: 0;
+                transform: translate3d(0, 0, 400px) rotateY(40deg);
+            }
+
+            div:nth-child(even){
+            	color: red;
+            	font-weight: bold;
+            }
+</style>
+
+<body class="max-width-container">
+	
+	 <div class="content"></div>
+        
+        <div class="about hidden">
+            <h2>This is heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum massa ac ex gravida, eu pharetra lorem hendrerit. Praesent sed massa eget massa vehicula volutpat. Donec augue ligula, pretium a congue sit amet, accumsan eget risus. Sed a imperdiet mauris. Proin ac purus at justo cursus ornare id eget elit. Cras a egestas massa. Fusce libero libero, pellentesque id vehicula ut, consectetur at lacus. Vestibulum mollis erat nibh. Fusce tincidunt lectus ut orci feugiat, sit amet scelerisque diam imperdiet. Donec et magna commodo, efficitur velit vel, aliquet enim. Duis nec mollis justo. Duis pulvinar vulputate leo at aliquam.</p>
+        </div>
+
+        <div class="contact hidden">
+            <h2>This is heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum massa ac ex gravida, eu pharetra lorem hendrerit. Praesent sed massa eget massa vehicula volutpat. Donec augue ligula, pretium a congue sit amet, accumsan eget risus. Sed a imperdiet mauris. Proin ac purus at justo cursus ornare id eget elit. Cras a egestas massa. Fusce libero libero, pellentesque id vehicula ut, consectetur at lacus. Vestibulum mollis erat nibh. Fusce tincidunt lectus ut orci feugiat, sit amet scelerisque diam imperdiet. Donec et magna commodo, efficitur velit vel, aliquet enim. Duis nec mollis justo. Duis pulvinar vulputate leo at aliquam.</p>
+        </div>
+
+        <div class="content"></div>
+                
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            (function() {             
+                var aboutEl = $('div.about'),
+                    aboutElOffset = aboutEl.offset().top/2,
+                    aboutElOffset2 = aboutEl.offset().top,
+                    documentEl = $(document);
+
+                    console.log(aboutElOffset);
+                    console.log(documentEl);
+                
+                documentEl.on('scroll', function() {
+                    if ( documentEl.scrollTop() > aboutElOffset && aboutEl.hasClass('hidden') )
+                     aboutEl.removeClass('hidden'); 
+                });
+
+                documentEl.on('scroll', function() {
+                	if ( documentEl.scrollTop() > aboutElOffset2 )
+                		aboutEl.addClass('hidden'); 
+                });
+
+                var aboutEl1 = $('div.contact'),
+                    aboutEl1Offset = aboutEl1.offset().top/2,
+                    aboutEl1Offset2 = aboutEl1.offset().top,
+                    documentEl = $(document);
+
+                    console.log(aboutEl1Offset);
+                    console.log(documentEl);
+                
+                documentEl.on('scroll', function() {
+                    if ( documentEl.scrollTop() > aboutEl1Offset && aboutEl1.hasClass('hidden') )
+                     aboutEl1.removeClass('hidden'); 
+                });
+
+                documentEl.on('scroll', function() {
+                	if ( documentEl.scrollTop() > aboutEl1Offset2 )
+                		aboutEl1.addClass('hidden'); 
+                });
+
+
+                documentEl.on('scroll', function() {
+                	if ( documentEl.scrollTop() == 0 )
+                		aboutEl1.addClass('hidden'); 
+                });
+            })();            
+        </script>
+</body>
+</html>
+

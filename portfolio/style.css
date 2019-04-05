@@ -1,0 +1,12 @@
+body {
+	font-family: 'Mukta', sans-serif;
+}
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+	color: red;
+	outline: 0;
+	text-decoration: none;
+}

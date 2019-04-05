@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Mobile Menu</title>
+
+	<style type="text/css">
+		.mobi-div > .inner-div{
+			background-color: red; 
+			cursor: pointer;
+			transition: 0.5s;
+		}
+		.inner-div {
+			height: 5px;
+			width: 30px;
+			border: 2px solid #fff;
+		}
+		.mobi-div .change{
+			margin: 5px;
+		}
+		.mobi-div .change > .inner-div{
+			background-color: blue: 
+		}
+		.change .bar-2{
+			opacity: 0;
+		}
+
+		.change .inner-div.bar-1 {
+			transform: rotate(45deg);
+			border-width: 0px;
+		}
+
+		.change .bar-3 {
+			transform: translate(1px,-13px) rotate(-45deg);
+			border-width: 0px;
+		}
+		.block {
+			background-color: red;
+			width: 0;
+			position: fixed;
+			overflow: auto;
+			height: 100vh;
+			transition: 0.4s;
+		}
+
+		.expand{
+			width: 50%;
+			transition: 0.4s;
+		}
+
+
+
+
+	</style>
+</head>
+<body style="position: relative;">
+	<div class="mobi-div">
+		<div class="inner-div bar-1"></div>	
+		<div class="inner-div bar-2"></div>	
+		<div class="inner-div bar-3"></div>	
+	</div>
+
+	<div class="block">
+	 	<ul>
+	 		<li>Test-0</li>
+	 		<li>Test-1</li>
+	 		<li>Test-2</li>
+	 	</ul>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$('.mobi-div').click(function(){
+		
+
+		if($(this).hasClass('change')){
+			$(this).removeClass('change');
+			$('.block').removeClass('expand');
+		}else{
+			$(this).addClass('change');
+			$('.block').addClass('expand');
+		}
+	});
+
+	// $(window).click(function(){
+	// 	if($('.block').hasClass('expand')){
+	// 		$('.block').removeClass('expand');
+	// 	}
+	// })
+</script>
+
+
+</html>

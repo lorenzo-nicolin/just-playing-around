@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+
+	.main{
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.left-side, .right-side {
+		float: left;
+		width: 50%;
+	}
+	.center-text{
+		text-align: center;
+		vertical-align: middle;
+		color: white;
+	}
+	.header{
+		background-color: #ccc;
+		height: 100px;
+		line-height: 90px;
+	}
+	.block{
+		background-color:#808080;
+	}
+	.side{
+		background-color:#708090;
+		height: 133.33px;
+		position: relative;
+	}
+	.side > p{
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.footer{
+		width: 100%;
+		clear: both;
+		background-color: #ccc;
+		height: 100px;
+		line-height: 90px;
+	}
+	.center-text {
+		height: 100px;
+		position: relative;
+	}
+	.center-text > p{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="reset.css">
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="center-text">
+				HEADER	
+			</div>
+		</div>
+		<div class="container">
+			<div class="left-side">
+				<div id="primary1" class="block">
+					<div class="center-text">
+						<p>Primary 1</p>
+					</div>
+				</div>
+				<div id="primary2" class="block">
+					<div class="center-text">
+						<p>Primary 2</p>
+					</div>
+				</div>
+				<div id="primary3" class="block">
+					<div class="center-text">
+						<p>Primary 3</p>
+					</div>
+				</div>
+				<div id="primary4" class="block">
+					<div class="center-text">
+						<p>Primary 4</p>
+					</div>
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="right-side-bar">
+					<div class="side">
+						<p>side1</p>
+					</div>	
+					<div class="side">
+						<p>side2</p>
+					</div>
+					<div class="side">
+						<p>side3</p>
+					</div>
+				</div>	
+			</div>	
+		</div>
+		<div class="footer">
+			<div class="center-text">
+				footer	
+			</div>
+		</div>
+
+	
+	</div>
+	
+</body>
+</html>

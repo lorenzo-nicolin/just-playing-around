@@ -1,0 +1,24 @@
+body{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+.page-body {
+	background-color: rebeccapurple;
+	width: 89%;
+	float: right;
+	word-wrap: break-word;
+}
+
+.sidebar {
+	width: 10%;
+	background-color: #ccc;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+}
+
+]

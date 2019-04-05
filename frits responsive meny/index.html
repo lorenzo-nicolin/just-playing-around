@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+	<title></title>
+</head>
+<style type="text/css">
+	#wrapper {
+	background:#fff;
+	display:inline-block;
+	border-radius:500px;
+	margin:10px;
+	position: relative;
+  padding:80px;
+	cursor:pointer;
+}
+
+.main-item {
+	width:20px;
+	height:40px;
+	position:relative;
+}
+
+.line {
+	position: absolute;
+	height: 15px;
+	width:100%;
+	background:white;
+	border-radius:10px;
+	transition: all ease 0.32s;
+	c
+}
+
+.line01 {
+	top:19%;
+}
+
+.line02 {
+	top:49%;
+}
+
+.line03 {
+	top:79%;
+}
+
+.menu.close .line01 {
+	transform:rotate(45deg);
+	top:49%;
+}
+
+.menu.close .line02, .menu.close .line03 {
+	transform:rotate(-45deg);
+	top:49%;
+}
+</style>
+<body>
+	<div id="wrapper">
+		<div class="main-item menu">
+			<span class="line line01"></span>
+			<span class="line line02"></span>
+			<span class="line line03"></span>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+$("#wrapper").click( function() {
+	$(".menu").toggleClass("close");
+});
+</script>

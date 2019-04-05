@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>changethistitle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="changethisdescription" />
+	<link rel="stylesheet" type="text/css" href="reset.css?v=1">
+	<link rel="stylesheet" type="text/css" href="style.css?v=1">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' type='text/css' media='all' />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+	<!-- <link rel='canonical' href='http://changethisurl.co.za/' /> -->
+	<!-- <link rel='shortlink' href='http://changethisurl.co.za/' /> -->
+	<!-- <link rel="icon" href="images/favicon.ico?v=1" /> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="scripts.js"></script>
+</head>
+<style type="text/css">
+	.img{
+		/*transition: 1s all wase;*/
+		cursor: pointer;
+		animation-name: example;
+   		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: both;
+	}
+
+	@keyframes example {
+		from {
+			transform: translateX(0);
+			
+		}
+    	to {
+    		transform: translateX(100px);
+    		transform: translate(200deg);
+    	}
+	}
+
+	.header {
+		height: 200px;
+		flex: 3;
+		/* flex-basis: 33.33%; */
+		padding: 10px;
+		width: 1200px;
+		background-color: #ccc;
+		margin-top: 10px;
+		cursor: pointer;
+		opacity: 0.7;
+		transition: 1s all;
+		margin: 5px;
+		position: relative;
+		margin-top: 50px;
+	}
+.header:hover {
+	background-color: #ccc;
+	/* box-shadow: 5px 10px azure; */
+	transform: scale(1.1);
+	opacity: 1;
+	color: red;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+	.wrapper{
+		width: 100%;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		
+	}
+
+	.header > p {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	@media (min-width: 900px){
+		.wrapper{
+			display: flex;
+		}
+	}	
+
+</style>
+<body>
+<!-- 	<div>
+		<img src="images/Image.png" width="250" class="img">	
+	</div>
+	<div class="test1">
+		<img src="images/Image.png" width="250" class="img">	
+	</div>
+	<div class="3">
+		<img src="images/Image.png" width="250" class="img">	
+	</div>
+	 -->
+
+	 <div class="wrapper">
+		 <div class="header"><p>test</p></div>
+		 <div class="header"><p>test</p></div>
+		 <div class="header"><p>test</p></div>
+	 	 
+	 </div>
+
+	
+	
+</body>
+</html>
